@@ -39,8 +39,8 @@ public class StatsService {
     }
 
     public int quantityMonthMinSales(int[] sales) {
-        int averageSales = 15; // Среднее кол-во продаж из метода averageSum (2)
         int quantityMonth = 0;
+        int averageSales = Arrays.stream(sales).sum() / 12;
 
         for (int i = 0; i < sales.length; i++) {
             if (sales [i] < averageSales) {
