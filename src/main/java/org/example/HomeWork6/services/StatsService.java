@@ -4,17 +4,21 @@ import java.util.Arrays;
 
 public class StatsService {
 
-    public int sumSales(int[] sales) {
-
-        return Arrays.stream(sales).sum();
+    public long sumSales(long[] sales) {
+        long totalSale = 0;
+        for (long sale : sales) {
+            totalSale += sale;
+        }
+        return totalSale;
     }
 
-    public int averageSum(int[] sales) {
+    public long averageSum(long[] sales) {
+        long totalSale = sumSales(sales);
 
-        return Arrays.stream(sales).sum() / 12;
+        return totalSale / sales.length;
     }
 
-    public int maxSales(int[] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -22,11 +26,10 @@ public class StatsService {
                 maxMonth = i;
             }
         }
-
         return maxMonth + 1;
     }
 
-    public int minSales(int[] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -34,13 +37,12 @@ public class StatsService {
                 minMonth = i;
             }
         }
-
         return minMonth + 1;
     }
 
-    public int quantityMonthMinSales(int[] sales) {
+    public int quantityMonthMinSales(long[] sales) {
         int quantityMonth = 0;
-        int averageSales = Arrays.stream(sales).sum() / 12;
+        long averageSales = averageSum(sales);
 
         for (int i = 0; i < sales.length; i++) {
             if (sales [i] < averageSales) {
@@ -50,9 +52,9 @@ public class StatsService {
         return quantityMonth;
     }
 
-    public int quantityMonthMaxSales(int[] sales) {
+    public int quantityMonthMaxSales(long[] sales) {
         int quantityMonth = 0;
-        int averageSales = Arrays.stream(sales).sum() / 12;
+        long averageSales = averageSum(sales);
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > averageSales) {

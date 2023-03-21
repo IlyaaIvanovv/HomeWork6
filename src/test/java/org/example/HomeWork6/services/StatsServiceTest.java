@@ -9,10 +9,10 @@ public class StatsServiceTest {
     public void SumSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedSumSales = 180;
-        int actualSumSales = service.sumSales(sales);
+        long actualSumSales = service.sumSales(sales);
 
         Assertions.assertEquals(expectedSumSales, actualSumSales);
 
@@ -22,10 +22,10 @@ public class StatsServiceTest {
     public void AverageSumSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAverageSumSales = 15;
-        int actualAverageSumSales = service.averageSum(sales);
+        long actualAverageSumSales = service.averageSum(sales);
 
         Assertions.assertEquals(expectedAverageSumSales, actualAverageSumSales);
 
@@ -35,10 +35,10 @@ public class StatsServiceTest {
     public void MaxMonthlySales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMaxMonth = 8;
-        int actualMaxMonth = service.maxSales(sales);
+        long actualMaxMonth = service.maxSales(sales);
 
         Assertions.assertEquals(expectedMaxMonth, actualMaxMonth);
 
@@ -48,10 +48,10 @@ public class StatsServiceTest {
     public void MinMonthlySales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMinMonth = 9;
-        int actualMinMonth = service.minSales(sales);
+        long actualMinMonth = service.minSales(sales);
 
         Assertions.assertEquals(expectedMinMonth, actualMinMonth);
 
@@ -61,10 +61,10 @@ public class StatsServiceTest {
     public void QuantityMonthMinSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedQuantityMinMonth = 5;
-        int actualQuantityMinMonth = service.quantityMonthMinSales(sales);
+        long actualQuantityMinMonth = service.quantityMonthMinSales(sales);
 
         Assertions.assertEquals(expectedQuantityMinMonth, actualQuantityMinMonth);
 
@@ -74,10 +74,10 @@ public class StatsServiceTest {
     public void QuantityMonthMaxSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedQuantityMaxMonth = 5;
-        int actualQuantityMaxMonth = service.quantityMonthMaxSales(sales);
+        long actualQuantityMaxMonth = service.quantityMonthMaxSales(sales);
 
         Assertions.assertEquals(expectedQuantityMaxMonth, actualQuantityMaxMonth);
 
